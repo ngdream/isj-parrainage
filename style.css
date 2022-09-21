@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --img : url('')
+}
+
+body {
+    min-height: 100vh;
+    justify-content: center;
+    background-color: #181818;
+}
+
+
+/* -----------------------------------------------------------------------------navigation bar */
+.maine_nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--dark_color);
+    padding: 2rem 1rem;
+}
+
+.maine_nav ul { display: flex; }
+
+.maine_nav li { padding: 1rem 1.5rem; }
+
+.maine_nav a {
+        color: #fff;
+        padding-bottom: 0.3rem;
+        border-bottom: 2px transparent solid;
+        transition: border-color 1s;
+}
+
+.maine_nav a .logo_title {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.6rem;
+    padding: 5px 0 0 0;
+    color: #fff;
+    text-transform: none;
+}
+/* ---------------------------------------------------------------------------------------- */
+.main {
+    margin-top: 4cm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+
+}
+/* -----------------------------------------------------------section du parrain */
+.loader {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0px 0px 100px 0px #59ff67;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background-image: conic-gradient(#2ed2a5 20deg,transparent 120deg);
+    animation: rotate 2.5s linear infinite;
+}
+.loader::after {
+    content: "Parrain";
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    background: #181818;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2ed2a5;
+    letter-spacing: 3px;
+    font-size: 1.125rem;
+    box-shadow: inset 20px 20px 20px #0000008c;
+}
+
+/* ------------------------------------------------------section du fiole */
+.loader-2 {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0px 0px 100px 0px #e559ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-2::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background-image: conic-gradient(#2ed2a5 20deg,transparent 120deg);
+    animation: rotate 2.5s linear infinite;
+}
+
+.loader-2::after{
+    content: 'fiole';
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    background: #181818;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2ed2a5;
+    letter-spacing: 3px;
+    font-size: 1.125rem;
+    box-shadow: inset 2px 6px 20px #e559ff;
+}
+
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
