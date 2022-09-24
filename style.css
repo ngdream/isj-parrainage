@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+    justify-content: center;
+    background-color: #181818;
+}
+
+
+/* -----------------------------------------------------------------------------HEADER-LIST */
+.maine_nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+}
+
+.maine_nav ul { display: flex; }
+
+.maine_nav li { padding: 1rem 1.5rem; }
+
+.maine_nav a {
+        color: #fff;
+        padding-bottom: 0.3rem;
+        border-bottom: 2px transparent solid;
+        transition: border-color 1s;
+}
+
+.maine_nav a .logo_title {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.6rem;
+    padding: 5px 0 0 0;
+    color: #fff;
+    text-transform: none;
+}
+
+i {
+    color: white;
+    font-size: 2rem;
+}
+
+/* ----------------------------------ANIMATED CIRCLES ------------------------------------------------------ */
+.main {
+    padding: 3.3cm 6cm 3cm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+/* -----------------------------------------------------------section du parrain */
+.loader {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0px 0px 100px 0px #59ff67;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-sh
+}
+
+.loader::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background-image: conic-gradient(#2ed2a5 20deg,transparent 120deg);
+    animation: rotat 4.5s linear infinite;
+}
+.loader::after {
+    content: "Parrain";
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    background: #181818;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2ed2a5;
+    letter-spacing: 3px;
+    font-size: 1.125rem;
+    box-shadow: inset 20px 20px 20px #0000008c;
+}
+
+/* ------------------------------------------------------section du fiolle */
+.loader-2 {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0px 0px 100px 0px #e559ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-2::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background-image: conic-gradient(#2ed2a5 20deg,transparent 120deg);
+    animation: rotate 4.5s linear infinite;
+}
+
+.loader-2::after{
+    content: 'fiole';
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    background: #181818;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2ed2a5;
+    letter-spacing: 3px;
+    font-size: 1.125rem;
+    box-shadow: inset 20px 20px 20px #0000008c;
+}
+
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotat {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+/* ----------------------------------------------BUtton */
+
+button {
+    width: 15%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:  auto;
+    border: solid 1px rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.123);
+    box-shadow: 6px 8px 20px 0px rgba(0, 0, 0 / 22%);
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 700;
+    overflow: hidden;
+    color: royalblue;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+}
+
+
+/* -----------------------------------------------------Button */
+button {
+    width: 15%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border: solid 1px rgba(255, 255, 255, 0.5);
+    background: transparent;
+    box-shadow: 6px 8px 20px 0px rgba(0, 0, 0 / 22%);
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 700;
+    overflow: hidden;
+    color: royalblue;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+}
+button:hover{
+    color: rgb(170, 172, 247);
+}
+button:hover::before{
+ left: 0;
+}
+button::before{
+    content: "";
+    position: absolute;
+    left: -130%;
+    top: 0;
+    width: 120%;
+    height: 120%;
+    background: rgb(111, 228, 236);
+    transition: all ease-in-out 1s;
+    filter: blur(20px);
+    z-index: -1;
+}
+u08
+
