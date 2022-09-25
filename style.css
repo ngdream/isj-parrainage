@@ -129,6 +129,7 @@ body {
     
     100%
     {
+      color: #f3f0f0;
       transform:scaleX(0);
     transform-origin: right;
       
