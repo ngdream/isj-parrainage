@@ -511,7 +511,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a29ca9', end
   content: attr(data-attr-span);
   width: 0%;
   height: 100%;
-  background:white;
+  background:rgb(111, 228, 236);
   white-space: nowrap;
   text-align: center;
   margin: auto;
