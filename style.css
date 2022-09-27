@@ -57,13 +57,14 @@ body {
   
   
   .box .content{
+    z-index: -10000;
     position:absolute;
     top:15px;
     left:15px;
     right:15px;
     bottom:15px;
-    border:1px solid #f0a591;
-    padding:20px;
+    border:22px solid #f0a591;
+    padding:0px;
     text-align:center;
     box-shadow: 0 5px 10px rgba(9,0,0,0.5);
     
@@ -82,22 +83,22 @@ body {
   
   .box span:nth-child(1)
   {
-    transform:rotate(0deg);
+    transform:rotate(49deg);
   }
   
   .box span:nth-child(2)
   {
-    transform:rotate(90deg);
+    transform:rotate(131deg);
   }
   
   .box span:nth-child(3)
   {
-    transform:rotate(180deg);
+    transform:rotate(222deg);
   }
   
   .box span:nth-child(4)
   {
-    transform:rotate(270deg);
+    transform:rotate(317deg);
   }
   
   .box span:before
@@ -105,7 +106,7 @@ body {
     content: '';
     position: absolute;
     width:100%;
-    height: 2px;
+    height: 10px;
     background: #50dfdb;
     animation: animate 4s linear infinite;
   }
@@ -171,7 +172,7 @@ i {
 
 /* ----------------------------------------------------------ANIMATED CIRCLES ------------------------------------------------------ */
 .main {
-    padding: 3.3cm 6cm 3cm;
+    padding: 3cm 1cm 2cm;
     display: flex;
     justify-content: space-between;
     align-items: center;
