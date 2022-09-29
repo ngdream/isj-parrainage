@@ -1,6 +1,8 @@
 
 
 function fpath(name){return "filleuls"+"/"+name}
+function ppath(name){return "parrains"+"/"+name}
+
 
 var current = 0
 //class  for fiole
@@ -40,8 +42,38 @@ var pphoto = document.getElementById("img_parrain")
 var fname = document.getElementById("name_fiole")
 var pname = document.getElementById("name_parrain")
 
-k = new Parrain("hhh", "test.png")
-k=new Parrain("hhh", "test2.png")
+new Parrain("hhh", ppath("Actor.jpeg"))
+new Parrain("hhh", ppath("Audrey.jpeg"))
+new Parrain("hhh", ppath("Bercam.jpeg"))
+new Parrain("hhh", ppath("B-James.jpeg"))
+new Parrain("hhh", ppath("Boris.jpeg"))
+new Parrain("hhh", ppath("Cindy Emma💖.jpeg"))
+new Parrain("hhh", ppath("Clinton.jpeg"))
+new Parrain("hhh", ppath("CodeurZEBS.jpeg"))
+new Parrain("hhh", ppath("Dalton.jpeg"))
+new Parrain("hhh", ppath("Daniel's stark.jpeg"))
+new Parrain("hhh", ppath("Eding.jpeg"))
+new Parrain("hhh", ppath("Eto'o.jpeg"))
+new Parrain("hhh", ppath("Gabono.jpeg"))
+new Parrain("hhh", ppath("JAson.jpeg"))
+new Parrain("hhh", ppath("Joan.jpeg"))
+new Parrain("hhh", ppath("Le Mindef.jpeg"))
+new Parrain("hhh", ppath("L'ondulleur.jpeg"))
+new Parrain("hhh", ppath("Luqman.jpeg"))
+new Parrain("hhh", ppath("Martial.jpeg"))
+new Parrain("hhh", ppath("Michel.jpeg"))
+new Parrain("hhh", ppath("Mon Segnieur.jpeg"))
+new Parrain("hhh", ppath("Monsieur-X.jpeg"))
+new Parrain("hhh", ppath("Mumu.jpeg"))
+new Parrain("hhh", ppath("Negro Content.jpeg"))
+new Parrain("hhh", ppath("Only Paul.jpeg"))
+new Parrain("hhh", ppath("Paul Hervé.jpeg"))
+new Parrain("hhh", ppath("Tchapda.jpeg"))
+new Parrain("hhh", ppath("Tout Bling_bling.jpeg"))
+new Parrain("hhh", ppath("Python.jpeg"))
+
+
+
 
 
 
@@ -84,7 +116,11 @@ function choose()
     var ptparrain = Parrain.list[current++]
     pphoto.src = ptparrain.photo
     
-    var j=0
+    var j = 0
+    var audio = new Audio('suspens.mp3');
+    audio.play();
+
+    var audio_app = new Audio('applause.mp3');
     var chooseinterval=window.setInterval(
         () => {
             var ptfiol = Fiole.list[Math.floor((Math.random() * (Fiole.list.length)))]
@@ -94,7 +130,7 @@ function choose()
             j += 1
             console.log(j)
 
-            if (j>= 200)
+            if (j>= 700)
             {
                 choosefiol(ptfiol, ptparrain)
                 window.clearInterval(chooseinterval) 
@@ -103,6 +139,8 @@ function choose()
     
     var choosefiol = (f,p) =>
     {
+        audio.pause()
+        audio.currentTime=0
         f.parrain.push(p)
         p.fiole.push(f)
         if (f.parrain.length > Fiole.nbrx)
@@ -110,7 +148,7 @@ function choose()
         if (p.fiole.length > Parrain.nbrx)
             Fiole.nbrx = p.fiole.length
         j=0
-              
+        window.setTimeout(audio_app.play.bind(audio_app),1000)  
         
        }
 }
