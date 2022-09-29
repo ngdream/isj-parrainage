@@ -1,4 +1,8 @@
-var current=0
+
+
+function fpath(name){return "filleuls"+"/"+name}
+
+var current = 0
 //class  for fiole
 class Fiole
 {
@@ -42,18 +46,35 @@ k=new Parrain("hhh", "test2.png")
 
 
 
-new Fiole("ddd", "test.png")
-new Fiole("ddd", "test4.png")
-new Fiole("ddd", "test2.png")
-new Fiole("ddd", "test.png")
-new Fiole("ddd", "test4.png")
-new Fiole("ddd", "test2.png")
-new Fiole("ddd", "test.png")
-new Fiole("ddd", "test4.png")
-new Fiole("ddd", "test2.png")
-new Fiole("ddd", "test.png")
-new Fiole("ddd", "test4.png")
-new Fiole("ddd", "test2.png")
+new Fiole("ddd", fpath("2022_09_22_14_08_IMG_1632.JPG"))
+new Fiole("ddd", fpath("ATANGANA DANIEL RALPH.JPG"))
+new Fiole("ddd", fpath("AYO AKOA RUTH YOLANDE.JPG"))
+new Fiole("ddd", fpath("BECKA YANN.JPG"))
+new Fiole("ddd", fpath("BELINGA MESSI JEAN PAUL KEVIN.JPG"))
+new Fiole("ddd", fpath("FELIX BIMOGA.JPG"))
+new Fiole("ddd", fpath("FONGANG NDEFO POL BRYAN.JPG"))
+new Fiole("ddd", fpath("ISSA HAROUN.JPG"))
+new Fiole("ddd", fpath("JUNANG ABDIEL.JPG"))
+new Fiole("ddd", fpath("KAMWA CINDY.JPG"))
+new Fiole("ddd", fpath("MBOPDA CHRIST FREED.JPG"))
+new Fiole("ddd", fpath("MELLANGI WILFRIED.JPG"))
+new Fiole("ddd", fpath("MUNKAM N. HARRY.JPG"))
+new Fiole("ddd", fpath("NANGOU POUNTOUGNIGNI MARILYN .JPG"))
+new Fiole("ddd", fpath("NDOUA MENDOUA JOEL.JPG"))
+new Fiole("ddd", fpath("NDZENGUE ATANGANA LIONEL.JPG"))
+new Fiole("ddd", fpath("NDZIE YEUTCHOU SUZANNE STEPHIE.JPG"))
+new Fiole("ddd", fpath("NGA YENDE ALI JUNIOR.JPG"))
+new Fiole("ddd", fpath("NGUETSA ZANGUIM DIDIER.JPG"))
+new Fiole("ddd", fpath("NJILIE MANDU MELISSA.JPG"))
+new Fiole("ddd", fpath("payong.JPG"))
+new Fiole("ddd", fpath("PEMITE NOAH GILLES DYLAN.JPG"))
+new Fiole("ddd", fpath("somo karl nelson.JPG"))
+new Fiole("ddd", fpath("SONGMENE LADO BELVIANE.JPG"))
+new Fiole("ddd", fpath("TADONKEMWA DONGMO WILL PEREZ.JPG"))
+new Fiole("ddd", fpath("TCHAKEU NGONGANG VIGNY WILFRIRD.JPG"))
+new Fiole("ddd", fpath("TIWA NGNINTEDEM CAMILLE ROMARIC.JPG"))
+new Fiole("ddd", fpath("ZIE LIONEL.JPG"))
+
 
 
 function choose()
@@ -68,7 +89,7 @@ function choose()
         () => {
             var ptfiol = Fiole.list[Math.floor((Math.random() * (Fiole.list.length)))]
             fphoto.src = ptfiol.photo;
-            fname.textContent = ptfiol.name;
+            //fname.textContent = ptfiol.name;
 
             j += 1
             console.log(j)
@@ -78,7 +99,7 @@ function choose()
                 choosefiol(ptfiol, ptparrain)
                 window.clearInterval(chooseinterval) 
             }
-        }, 100) 
+        }, 20) 
     
     var choosefiol = (f,p) =>
     {
@@ -88,7 +109,7 @@ function choose()
             Fiole.nbrx = f.parrain.length
         if (p.fiole.length > Parrain.nbrx)
             Fiole.nbrx = p.fiole.length
-        
+        j=0
               
         
        }

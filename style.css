@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     min-height: 100vh;
     justify-content: center;
@@ -176,89 +175,83 @@ i {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-
 }
 /* -----------------------------------------------------------section du parrain */
-.loader {
-    width: 300px;
-    height: 300px;
-    position: relative;
-    border-radius: 100%;
-    overflow: hidden;
+.loader-1 {
     box-shadow: 0px 0px 100px 0px #59ff67;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
 }
 
-.loader::before {
-    content: "";
-    position: absolute;
-    width: 120%;
-    height: 120%;
+.loader-1::before {
+
     background-image: conic-gradient(#2ed2a5 20deg,transparent 120deg);
     animation: rotat 4.5s linear infinite;
 }
-.loader::after {
+.loader-1::after {
     content: "Parrain";
-    position: absolute;
-    width: 95%;
-    height: 95%;
-    background: #181818;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: #2ed2a5;
-    letter-spacing: 3px;
-    font-size: 1.125rem;
-    box-shadow: inset 20px 20px 20px #0000008c;
+
 }
 
 /* ------------------------------------------------------section du fiolle */
 .loader-2 {
-    width: 300px;
-    height: 300px;
-    position: relative;
-    border-radius: 100%;
-    overflow: hidden;
+
     box-shadow: 0px 0px 100px 0px #e559ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
+
 .loader-2::before {
-    content: "";
-    position: absolute;
-    width: 120%;
-    height: 120%;
+
     background-image: conic-gradient(#2ed2a5 20deg,transparent 120deg);
     animation: rotate 4.5s linear infinite;
 }
 
 .loader-2::after{
     content: 'fiole';
-    position: absolute;
-    width: 95%;
-    height: 95%;
-    background: #181818;
+
+    color: #2ed2a5;
+
+}
+
+.loader
+{
+  width: 300px;
+    height: 300px;
+    position: relative;
     border-radius: 100%;
+    overflow: hidden;
+  
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #2ed2a5;
-    letter-spacing: 3px;
-    font-size: 1.125rem;
-    box-shadow: inset 20px 20px 20px #0000008c;
+}
+
+.loader::after
+{
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  background: #181818;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 3px;
+  font-size: 1.125rem;
+  box-shadow: inset 20px 20px 20px #0000008c;
+}
+
+.loader::before
+{
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
 }
 
 img
 {
-    z-index: 1;
-    overflow: hidden;
+    z-index: 300;
+    width: 100%;
 }
 
 
@@ -280,30 +273,7 @@ img
     }
 }
 
-/* ----------------------------------------------BUtton */
-/* 
-button {
-    width: 15%;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin:  auto;
-    border: solid 1px rgba(255, 255, 255, 0.5);
-    background: rgba(255, 255, 255, 0.123);
-    box-shadow: 6px 8px 20px 0px rgba(0, 0, 0 / 22%);
-    border-radius: 7px;
-    cursor: pointer;
-    font-weight: 700;
-    overflow: hidden;
-    color: royalblue;
-    font-size: 1rem;
-    font-family: "Poppins", sans-serif;
-    position: relative;
-} */
 
-
-/* -----------------------------------------------------Button */
 button {
     width: 15%;
     height: 45px;
@@ -312,10 +282,8 @@ button {
     align-items: center;
     margin: 0 auto;
     border: solid 1px rgba(255, 255, 255, 0.5);
-    background: transparent;
     box-shadow: 6px 8px 20px 0px rgba(0, 0, 0 / 22%);
     border-radius: 7px;
-    cursor: pointer;
     font-weight: 700;
     overflow: hidden;
     color: royalblue;
@@ -364,7 +332,6 @@ button::before{
   left: 0;
   right:0;
   bottom: 0;
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a29ca9+0,95909b+99 */
 background: #a29ca9; /* Old browsers */
 background: -moz-linear-gradient(-45deg, #a29ca9 0%, #95909b 99%); /* FF3.6-15 */
 background: -webkit-linear-gradient(-45deg, #a29ca9 0%,#95909b 99%); /* Chrome10-25,Safari5.1-6 */
@@ -372,7 +339,8 @@ background: linear-gradient(135deg, #a29ca9 0%,#95909b 99%); /* W3C, IE10+, FF16
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a29ca9', endColorstr='#95909b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   content: '';
   opacity: 0;
-    -webkit-transition: opacity 0.9s ease 0s; 
+  -webkit-transition: opacity 0.9s ease 0s; 
+  transition:  opacity 0.9s ease 0s;
 }
 
 .categoryWrapper:hover:after{
