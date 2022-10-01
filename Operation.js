@@ -130,10 +130,10 @@ function choose()
             j += 1
             console.log(j)
 
-            if (j>= 700)
+            if (j>= 300)
             {
                 choosefiol(ptfiol, ptparrain)
-                window.clearInterval(chooseinterval) 
+                window.clearInterval(chooseinterval)
             }
         }, 20) 
     
@@ -148,8 +148,7 @@ function choose()
         if (p.fiole.length > Parrain.nbrx)
             Fiole.nbrx = p.fiole.length
         j=0
-        window.setTimeout(audio_app.play.bind(audio_app),1000)  
-        
+        window.setTimeout(audio_app.play.bind(audio_app),1000)
        }
 }
 
@@ -158,6 +157,7 @@ function choose()
 
 
 document.getElementById("start").addEventListener("click", () => {
+    this.disable=true
     choose();
 
 })
