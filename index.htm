@@ -28,21 +28,44 @@
       </div>
     </section>
     </a>
+<style>
+  .cover
+  {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #181818;
+    z-index: -1000;
+  }
+  .loader-expand
+  {
+    width: 450px;
+    height: 450px;
 
-<div></div>
+  }
+</style>
+<div class="cover"></div>
 
     <div class="main">
+      <div style="text-align: center;">
       <div class="loader loader-1">
         <img src="" id="img_parrain" alt="vvj iook">
         
       </div>
-      <div class="loader loader-2">
+      <span class="name name_1" style="" id="name_parrain">name 1</span>
+      </div>
+
+      <div style="text-align: center;">
+     <div class="loader loader-2">
         <img src="" id="img_fiole" alt="vv">
       </div>
+      <span class="name name_2 " style="" id="name_fiole">name2</span>
+      </div>
+
     </div>
 </div>
 
-<div class="centerBox">
+<div class="centerBox" style="z-index:; position:relative">
 
     <div class="categoryWrapper">
       <h1>Commencer</h1>
@@ -57,6 +80,59 @@
       </button>
     </div>     
 </div>
+
+<style>
+  .liste-box
+  {
+    position: fixed;
+    top:0;
+    width:100%;
+    height: 100%;
+    display: none;
+    background-color: #181818;
+    z-index: 1000;
+
+  }
+
+  table
+  {
+    color:white;
+    width:100%;
+    
+  }
+
+  td
+  {
+    padding: 20px;
+  }
+</style>
+<div class="liste-box">
+<table>
+  <tr>
+    <th>parrain</th>
+    <th>fioles</th>
+  </tr>
+<tr>
+
+  <td>i</td>
+  <td>yo</td>
+</tr>
+
+<tr>
+
+  <td>fff</td>
+  <td>ddd</td>
+</tr>
+</table>
+</div>
+<button class="list" style="z-index:1001 ;">liste</button>
 <script src="operation.js"></script>
+
+
+
+
+<script>
+
+</script>
 </body>
 </html>
