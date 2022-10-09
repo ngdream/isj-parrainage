@@ -41,6 +41,8 @@
   {
     width: 450px;
     height: 450px;
+    max-width:450px;
+    max-height: 450px;
 
   }
 </style>
@@ -49,17 +51,17 @@
     <div class="main">
       <div style="text-align: center;">
       <div class="loader loader-1">
-        <img src="" id="img_parrain" alt="vvj iook">
+        <img src="" id="img_fiole" alt="vvj iook">
         
       </div>
-      <span class="name name_1" style="" id="name_parrain">name 1</span>
+      <span class="name name_1" style="" id="name_fiole">name 1</span>
       </div>
 
       <div style="text-align: center;">
      <div class="loader loader-2">
-        <img src="" id="img_fiole" alt="vv">
+        <img src="" id="img_parrain" alt="vv">
       </div>
-      <span class="name name_2 " style="" id="name_fiole">name2</span>
+      <span class="name name_2 " style="" id="name_parrain">name2</span>
       </div>
 
     </div>
@@ -84,10 +86,10 @@
 <style>
   .liste-box
   {
-    position: fixed;
+    position: absolute;
     top:0;
     width:100%;
-    height: 100%;
+    min-height: 100%;
     display: none;
     background-color: #181818;
     z-index: 1000;
@@ -112,17 +114,8 @@
     <th>parrain</th>
     <th>fioles</th>
   </tr>
-<tr>
 
-  <td>i</td>
-  <td>yo</td>
-</tr>
 
-<tr>
-
-  <td>fff</td>
-  <td>ddd</td>
-</tr>
 </table>
 </div>
 <button class="list" style="z-index:1001 ;">liste</button>
